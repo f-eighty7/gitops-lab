@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webb-app
+  name: enkel-webb
   namespace: default
 spec:
   replicas: 1
