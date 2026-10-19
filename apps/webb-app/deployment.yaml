@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webb-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enkel-webb
+  template:
+    metadata:
+      labels:
+        app: enkel-webb
+    spec:
+      containers:
+        - name: enkel-webb
+          image: nginx:alpine
+          ports:
+            - containerPort: 8080
