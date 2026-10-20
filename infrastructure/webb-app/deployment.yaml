@@ -13,8 +13,12 @@ spec:
       labels:
         app: enkel-webb
     spec:
+      serviceAccountName: webb-app-sa
       containers:
         - name: enkel-webb
           image: nginx:alpine
           ports:
             - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: webb-app-secret
