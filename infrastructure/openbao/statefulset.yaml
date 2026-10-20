@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: openbao
-          image: openbao/openbao:2.0.0
+          image: openbao/openbao:2.7.1
           command:
             - bao
             - server
